@@ -24,7 +24,8 @@ public class Revolver {
         return Fuego;
     }
 
-    public void siguienteTiro() {
+    public void siguienteTiro() { /* Metodo para pasar al siguiente tiro, es decir si estamos en la posición 1 
+        y eso es igual a 6, no. Entonces paso al siguiente y asi sucesivamente, pero cuando llegue al 6to, que deberia pasar al siguiente, vulve al 1*/
         if (PosicionDisparoActual == 6) {
             PosicionDisparoActual = 1;
         } else {

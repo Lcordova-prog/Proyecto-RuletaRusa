@@ -7,7 +7,7 @@ public class Juego {
     private Participantes[] jugadores;
     private Revolver revolver;
 
-    public Juego(int cantidadJugadores) { //Metodo para pasar jugadores
+    public Juego(int cantidadJugadores) { 
 
         jugadores = new Participantes[ComprobacionJugadores(cantidadJugadores)];
 
@@ -17,20 +17,20 @@ public class Juego {
         System.out.println(revolver);
     }
 
-    private int ComprobacionJugadores(int cantidadJugadores) {
+    private int ComprobacionJugadores(int cantidadJugadores) { //Metodo para comprobar jugadores 
         if ((cantidadJugadores > 1 && cantidadJugadores <= 6)) {
             cantidadJugadores = 6;
         }
         return cantidadJugadores;
     }
 
-    private void rellenarJugadores() {
+    private void rellenarJugadores() { //Metodo para crear jugadores
         for (int i = 0; i < jugadores.length; i++) {
             jugadores[i] = new Participantes(i + 1);
         }
     }
 
-    public boolean finalDeljuego() {
+    public boolean finalDeljuego() { // Metodo para recorrer jugadores y verificar si estan vivos los jugadores, esto determinara si se termina el juego
         for (int i = 0; i < jugadores.length; i++) {
             if (!jugadores[i].isVivo()) {
                 return true;
@@ -40,7 +40,7 @@ public class Juego {
         return false;
     }
 
-    public void ronditas() throws IOException {
+    public void ronditas() throws IOException { // Esto recorrer rondas
         for (int i = 0; i < jugadores.length; i++) {
             jugadores[i].Fuego(revolver);
         }
