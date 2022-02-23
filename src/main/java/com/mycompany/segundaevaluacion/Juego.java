@@ -1,11 +1,13 @@
 package com.mycompany.segundaevaluacion;
 
+import java.io.IOException;
+
 public class Juego {
 
     private Participantes[] jugadores;
     private Revolver revolver;
 
-    public Juego(int cantidadJugadores) {
+    public Juego(int cantidadJugadores) { //Metodo para pasar jugadores
 
         jugadores = new Participantes[ComprobacionJugadores(cantidadJugadores)];
 
@@ -16,7 +18,7 @@ public class Juego {
     }
 
     private int ComprobacionJugadores(int cantidadJugadores) {
-        if (!(cantidadJugadores > 1 && cantidadJugadores <= 6)) {
+        if ((cantidadJugadores > 1 && cantidadJugadores <= 6)) {
             cantidadJugadores = 6;
         }
         return cantidadJugadores;
@@ -38,10 +40,13 @@ public class Juego {
         return false;
     }
 
-    public void ronditas() {
+    public void ronditas() throws IOException {
         for (int i = 0; i < jugadores.length; i++) {
             jugadores[i].Fuego(revolver);
         }
     }
+   
+        }
+    
 
-}
+

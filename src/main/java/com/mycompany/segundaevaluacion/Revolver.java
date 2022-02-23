@@ -10,9 +10,9 @@ public class Revolver {
         PosicionDisparo = Metodos.generarNumeroAleatorio(1, 6);
     }
 
-    public boolean disparar() {
+    public boolean disparar() { //Metodo que me devulve true si la bala concuerda con la posición actual
 
-        boolean Fuego = true;
+        boolean Fuego = true; //Metodo para disparar
 
         if (PosicionDisparoActual == PosicionDisparo) {
 
@@ -32,7 +32,5 @@ public class Revolver {
         }
     }
 
-    public String toString() {
-        return "Posicion de la Bala Actual: " + PosicionDisparoActual + ", Sitio de la Bala" + PosicionDisparo;
-    }
+   
 }

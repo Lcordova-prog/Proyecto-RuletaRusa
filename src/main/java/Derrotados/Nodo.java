@@ -9,7 +9,11 @@ package Derrotados;
  * @author Pc1
  */
 class Nodo {
-    int muertos;
+    String muertos;
     Nodo siguiente;
+
+    Nodo(String nombre) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
